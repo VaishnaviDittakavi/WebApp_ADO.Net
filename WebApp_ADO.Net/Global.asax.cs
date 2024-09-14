@@ -17,5 +17,10 @@ namespace WebApp_ADO.Net
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Application_End(object sender, EventArgs e)
+        {
+
+        }
     }
 }
