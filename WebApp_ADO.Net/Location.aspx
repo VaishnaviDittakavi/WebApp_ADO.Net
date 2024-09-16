@@ -49,16 +49,22 @@
                     <asp:Label ID="lblCountry" runat="server" Text="Countries"></asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="ddlCountries" runat="server">
+                    <asp:DropDownList ID="ddlCountries" runat="server" DataTextField="country_name" DataValueField="country_id">
                     </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:Button ID="btnInsert" runat="server" Text="Add Location" />
+                    <asp:Button ID="btnInsert" runat="server" Text="Add Location" OnClick="btn_InsertLocation_Click" />
                 </td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnLocations" runat="server" Text="GetLocations" />
+                    <asp:Button ID="btnLocations" runat="server" Text="GetLocations" OnClick="btn_GetLocations_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2" colspan="2">
+                    <asp:GridView ID="gridLocations" runat="server">
+                    </asp:GridView>
                 </td>
             </tr>
         </table>
